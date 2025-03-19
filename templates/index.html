@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web Simple</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        
+        <div id="inputContainer" class="input-container">
+            <input id="textInput" type="text" class="text-input" 
+                   placeholder="Escribe algo y presiona Enter...">
+        </div>
+        
+        <button id="colorButton" class="button">Cambiar Colores</button>
+        <button id="submitButton" class="button">Enter</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Texto Ingresado</h2>
+            <p>Has ingresado el siguiente texto:</p>
+            <div id="modalText" class="text-display"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
